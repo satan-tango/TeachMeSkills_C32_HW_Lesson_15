@@ -36,7 +36,10 @@ public class ApplicationRunner {
                 numbers.add(number);
             } catch (NumberFormatException e) {
                 System.out.println("Only numbers are allowed to enter, try again");
+            } catch (Exception e) {
+                e.printStackTrace();
             }
+
         }
 
         numbers.stream().filter(k -> k % 2 == 0).forEach(System.out::println);

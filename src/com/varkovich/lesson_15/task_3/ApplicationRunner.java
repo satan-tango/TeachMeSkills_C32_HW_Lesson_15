@@ -4,7 +4,6 @@ import com.varkovich.lesson_15.task_3.user_action.UserAction;
 import com.varkovich.lesson_15.task_3.utils.CollectionLengthValidationState;
 import com.varkovich.lesson_15.task_3.validator.CollectionLengthValidator;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -37,7 +36,7 @@ public class ApplicationRunner {
                 .ints(1, 20)
                 .limit(Integer.valueOf(length))
                 .boxed()
-                .collect(Collectors.toList());
+                .toList();
 
         numbers.forEach(System.out::println);
 
